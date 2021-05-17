@@ -6,7 +6,7 @@ import lombok.Data;
 @Data
 @Builder
 public class ProductPrice {
-	private weekDays weekdays;
+	private WeekDays weekdays;
 	private double price;
 
 }

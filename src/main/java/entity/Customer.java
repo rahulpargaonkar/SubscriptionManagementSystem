@@ -16,9 +16,8 @@ public class Customer implements ICustomer {
 	public double getSubScriptionPriceForCurrentMonth() {
 
 		return subscription.stream()
-				.filter(sub -> sub.getFrequency().toString().equalsIgnoreCase(frequency.Monthly.name()))
 				.filter(sub -> sub.getStartDate().isBefore(LocalDate.now().with(TemporalAdjusters.lastDayOfMonth())))
-				.mapToDouble(o -> o.getAmount()).sum();
+				.mapToDouble(sub -> sub.getAmount()).sum();
 
 	}
 

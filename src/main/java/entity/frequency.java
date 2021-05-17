@@ -1,6 +1,6 @@
 package entity;
 
-public enum frequency {
-	Monthly,WeekLy,BiweekLy
+public enum Frequency {
+	Monthly,Weekly,Biweekly
 
 }
